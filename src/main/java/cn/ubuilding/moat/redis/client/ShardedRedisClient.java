@@ -2,7 +2,7 @@ package cn.ubuilding.moat.redis.client;
 
 import cn.ubuilding.moat.redis.RedisAction;
 import cn.ubuilding.moat.redis.RedisClient;
-import cn.ubuilding.moat.redis.ShardedNode;
+import cn.ubuilding.moat.redis.node.ShardedNode;
 import redis.clients.jedis.*;
 import redis.clients.jedis.exceptions.JedisException;
 

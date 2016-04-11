@@ -2,7 +2,7 @@ package cn.ubuilding.moat.redis.client;
 
 import cn.ubuilding.moat.redis.RedisAction;
 import cn.ubuilding.moat.redis.RedisClient;
-import cn.ubuilding.moat.redis.SentinelNode;
+import cn.ubuilding.moat.redis.node.SentinelNode;
 import cn.ubuilding.moat.redis.pool.ShardedJedisSentinelPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.ShardedJedis;

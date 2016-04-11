@@ -1,4 +1,4 @@
-package cn.ubuilding.moat.redis;
+package cn.ubuilding.moat.redis.node;
 
 
 import java.io.Serializable;

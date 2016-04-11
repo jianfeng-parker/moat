@@ -28,12 +28,12 @@
              <constructor-arg index="0" ref="jedisPoolConfig"/>
              <constructor-arg index="1">
                  <list>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.ShardedNode">
+                     <bean class="cn.ubuilding.moat.redis.node.ShardedNode">
                          <constructor-arg index="0" value="192.168.1.105"/>
                          <constructor-arg index="1" value="6479"/>
                          <constructor-arg index="2" value="shard105"/>
                      </bean>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.ShardedNode">
+                     <bean class="cn.ubuilding.moat.redis.node.ShardedNode">
                          <constructor-arg index="0" value="192.168.1.104"/>
                          <constructor-arg index="1" value="6379"/>
                          <constructor-arg index="2" value="shard104"/>
@@ -50,15 +50,15 @@
              <constructor-arg index="2">
                  <!--sentinel节点信息(此处注意:不是Redis的ip和port)-->
                  <set>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.SentinelNode">
+                     <bean class="cn.ubuilding.moat.redis.node.SentinelNode">
                          <constructor-arg index="0" value="192.168.1.105"/>
                          <constructor-arg index="1" value="26379"/>
                      </bean>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.SentinelNode">
+                     <bean class="cn.ubuilding.moat.redis.node.SentinelNode">
                          <constructor-arg index="0" value="192.168.1.105"/>
                          <constructor-arg index="1" value="26479"/>
                      </bean>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.SentinelNode">
+                     <bean class="cn.ubuilding.moat.redis.node.SentinelNode">
                          <constructor-arg index="0" value="192.168.1.105"/>
                          <constructor-arg index="1" value="26579"/>
                      </bean>
@@ -78,15 +78,15 @@
              </constructor-arg>
              <constructor-arg index="2">
                  <set>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.SentinelNode">
+                     <bean class="cn.ubuilding.moat.redis.node.SentinelNode">
                          <constructor-arg index="0" value="192.168.1.104"/>
                          <constructor-arg index="1" value="26379"/>
                      </bean>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.SentinelNode">
+                     <bean class="cn.ubuilding.moat.redis.node.SentinelNode">
                          <constructor-arg index="0" value="192.168.1.104"/>
                          <constructor-arg index="1" value="26479"/>
                      </bean>
-                     <bean class="cn.ubuilding.ocean.biz.core.cache.redis.SentinelNode">
+                     <bean class="cn.ubuilding.moat.redis.node.SentinelNode">
                          <constructor-arg index="0" value="192.168.1.104"/>
                          <constructor-arg index="1" value="26579"/>
                      </bean>
