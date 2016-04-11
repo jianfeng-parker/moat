@@ -24,7 +24,7 @@
           2. 若Redis存在主从切换，此处是无法感知的，那么原先连接的主节点就变成了从节点，所以会导致写操作失败；
           3. 此处暂时忽略主从切换的情况，默认连接的都是可 读/写 的节点(一般情况下若Redis以主从模式部署的话Master节点都是可 读/写)
          -->
-         <bean id="shardRedisClient" class="cn.ubuilding.ocean.biz.core.cache.redis.client.ShardedRedisClient">
+         <bean id="shardRedisClient" class="cn.ubuilding.moat.redis.client.ShardedRedisClient">
              <constructor-arg index="0" ref="jedisPoolConfig"/>
              <constructor-arg index="1">
                  <list>
@@ -44,7 +44,7 @@
      
          <!--==============Jedis哨兵模式连接池(对主从切换有感知)============-->
          <!--使用哨兵模式的Jedis客户端实例-->
-         <bean id="sentinelRedisClient" class="cn.ubuilding.ocean.biz.core.cache.redis.client.SentinelRedisClient">
+         <bean id="sentinelRedisClient" class="cn.ubuilding.moat.redis.client.SentinelRedisClient">
              <constructor-arg index="0" ref="jedisPoolConfig"/>
              <constructor-arg index="1" value="master_105"/>
              <constructor-arg index="2">
@@ -68,7 +68,7 @@
      
          <!--================使用ShardedJedisSentinelPool================-->
          <bean id="shardSentinelRedisClient"
-               class="cn.ubuilding.ocean.biz.core.cache.redis.client.ShardedSentinelRedisClient">
+               class="cn.ubuilding.moat.redis.client.ShardedSentinelRedisClient">
              <constructor-arg index="0" ref="jedisPoolConfig"/>
              <constructor-arg index="1">
                  <list>
